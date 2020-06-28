@@ -1,0 +1,123 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Foddfy - Receitas</title>
+{% endblock %}
+
+{% block content %}             
+    <div class="title_cards">
+        <h2>Receitas</h2>
+    </div>
+
+    <section class="cards">
+        
+        <div class="card" id="hamburguer">
+            <div class="card_image-container">
+                <img src="../public/assets/hamburguer.png" alt="hamburger">
+            </div>
+
+            <div class="card_title" id="Triplo bacon burger">
+                <h4>Triplo bacon burger</h4>
+            </div>
+
+            <div class="card_author">
+                <p>Por Jorge Relato</p>
+            </div>
+        </div>
+
+        <div class="card" id="lasagna">
+            <div class="card_image-container">
+                <img src="../public/assets/lasagna.png" alt="lasagna">
+            </div>
+
+            <div class="card_title" id="Lasanha mac c' cheese">
+                <h4>Lasanha mac c' cheese</h4>
+            </div>
+
+            <div class="card_author">
+                <p>Por Juliano Vieira</p>
+            </div>
+        </div>
+
+        <div class="card" id="chicken">
+            <div class="card_image-container">
+                <img src="../public/assets/chicken.png" alt="chicken">
+            </div>
+
+            <div class="card_title" id="Asinhas de frango ao barbecue">
+                <h4>Asinhas de frango ao barbecue</h4>
+            </div>
+
+            <div class="card_author">
+                <p>Por Vania Steroski</p>
+            </div>
+        </div>
+
+        <div class="card" id="pizza">
+            <div class="card_image-container">
+                <img src="../public/assets/pizza.png" alt="pizza">
+            </div>
+
+            <div class="card_title" id="Pizza Mussarela">
+                <h4>Pizza Mussarela</h4>
+            </div>
+
+            <div class="card_author">
+                <p>Por Isaac Aguiar</p>
+            </div>
+        </div>
+
+        <div class="card" id="tacos">
+            <div class="card_image-container">
+                <img src="../public/assets/tacos.png" alt="tacos">
+            </div>
+
+            <div class="card_title" id="Tacos Mexicanos">
+                <h4>Tacos Mexicanos</h4>
+            </div>
+
+            <div class="card_author">
+                <p>Por Antônio Moraléz</p>
+            </div>
+        </div>
+
+        <div class="card" id="sandwich">
+            <div class="card_image-container">
+                <img src="../public/assets/sandwich.png" alt="sandwich">
+            </div>
+
+            <div class="card_title">
+                <h4>Sanduíche natural</h4>
+            </div>
+
+            <div class="card_author">
+                <p>Por Liss Pomorov</p>
+            </div>
+        </div>
+
+    </section>
+{% endblock%}
+
+{% block modal %}
+    <div class="modal-overlay"> 
+        <div class="modal">
+            <div class="modal-content">
+                <div class="modal-image">
+                    <img src="../public/assets/hamburguer.png" alt="receita">
+                </div>
+
+                <div class="modal-title">
+                    <h4>Triplo bacon burger</h4>
+                </div>
+
+                <div class="modal-author">
+                    <p>Por Jorge Relato</p>
+                </div>
+            </div>
+
+            <div class="close-modal">
+                <a><p>Fechar modal</p></a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

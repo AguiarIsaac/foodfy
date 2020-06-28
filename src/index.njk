@@ -17,93 +17,25 @@
     </div>
 
     <div class="title_cards">
-        <h2>Mais acessadas</h2>
+        <h2>Receitas</h2>
     </div>
 
     <section class="cards">
-        <div class="card" id="hamburguer">
-            <div class="card_image-container">
-                <img src="/assets/hamburguer.png" alt="hamburger">
-            </div>
+        {% for item in items%}
+            <div class="card">
+                <div class="card_image-container">
+                    <img src="{{item.image}}" alt="{{item.title}}">
+                </div>
 
-            <div class="card_title" id="Triplo bacon burger">
-                <h4>Triplo bacon burger</h4>
-            </div>
+                <div class="card_title" id="{{item.title}}">
+                    <h4>{{item.title}}</h4>
+                </div>
 
-            <div class="card_author">
-                <p>Por Jorge Relato</p>
+                <div class="card_author">
+                    <p>{{item.author}}</p>
+                </div>
             </div>
-        </div>
-
-        <div class="card" id="lasagna">
-            <div class="card_image-container">
-                <img src="/assets/lasagna.png" alt="lasagna">
-            </div>
-
-            <div class="card_title" id="Lasanha mac c' cheese">
-                <h4>Lasanha mac c' cheese</h4>
-            </div>
-
-            <div class="card_author">
-                <p>Por Juliano Vieira</p>
-            </div>
-        </div>
-
-        <div class="card" id="chicken">
-            <div class="card_image-container">
-                <img src="/assets/chicken.png" alt="chicken">
-            </div>
-
-            <div class="card_title" id="Asinhas de frango ao barbecue">
-                <h4>Asinhas de frango ao barbecue</h4>
-            </div>
-
-            <div class="card_author">
-                <p>Por Vania Steroski</p>
-            </div>
-        </div>
-
-        <div class="card" id="pizza">
-            <div class="card_image-container">
-                <img src="/assets/pizza.png" alt="pizza">
-            </div>
-
-            <div class="card_title" id="Pizza Mussarela">
-                <h4>Pizza Mussarela</h4>
-            </div>
-
-            <div class="card_author">
-                <p>Por Isaac Aguiar</p>
-            </div>
-        </div>
-
-        <div class="card" id="tacos">
-            <div class="card_image-container">
-                <img src="/assets/tacos.png" alt="tacos">
-            </div>
-
-            <div class="card_title" id="Tacos Mexicanos">
-                <h4>Tacos Mexicanos</h4>
-            </div>
-
-            <div class="card_author">
-                <p>Por Antônio Moraléz</p>
-            </div>
-        </div>
-
-        <div class="card" id="sandwich">
-            <div class="card_image-container">
-                <img src="/assets/sandwich.png" alt="sandwich">
-            </div>
-
-            <div class="card_title">
-                <h4>Sanduíche natural</h4>
-            </div>
-
-            <div class="card_author">
-                <p>Por Liss Pomorov</p>
-            </div>
-        </div>
+        {%endfor%}
     </section>
  {% endblock %}
 

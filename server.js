@@ -1,6 +1,7 @@
 //Importação das funções
 const express = require('express')
 const nunjucks = require('nunjucks')
+const receitas = require('./data') // Importa arquivo externo
 
 //Chamada da função
 const server = express()
@@ -25,7 +26,7 @@ nunjucks.configure('src', {
 
 //Criação de rotas
 server.get('/', function(req, res){
-    res.render('index')
+    res.render('index',  { items: receitas })
 })
 
 server.get('/sobre', function(req, res){
@@ -33,5 +34,9 @@ server.get('/sobre', function(req, res){
 })
 
 server.get('/receitas', function(req,res){
-    res.render('receitas')
+    res.render('receitas', { items: receitas })
+})
+
+server.get('/recipe', function (req, res){
+    res.render('recipe', { items: receitas })
 })

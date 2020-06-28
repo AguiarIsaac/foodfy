@@ -1,0 +1,13 @@
+main {
+    margin-top: 36px;
+}
+
+.titles {
+    margin: 20px;
+    margin-left: 0;
+}
+
+main article p {
+    margin-bottom: 15px;
+    justify-content:start;
+}

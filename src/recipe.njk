@@ -2,8 +2,57 @@
 
 {% block head %}
     <title>Foddfy - {{item.title}}</title>
+    <link rel="stylesheet" href="/css/recipe.css">
 {% endblock %}
 
 {%block content %}
-    
+    <div class="recipe">
+        <div class="image_container">
+            <img src="/assets/tacos.png" alt="">
+        </div>
+
+        <div class="titles">
+            <h1>Tacos fuderosos</h1>
+            <p>por Isaac abrobinha</p>
+        </div>
+
+        <div class="ingredientes">
+            <div class="title_recipe">
+                <h3>Ingredientes</h3>
+                <a href="#">Esconder</a>
+            </div>
+            <ul>
+                <li>Doritos;</li>
+                <li>Tomate;</li>
+                <li>pimenta;</li>
+                <li>Creme de abacate;</li>
+                <li>katshup;</li>
+                <li>Ovos;</li>
+            </ul>
+        </div>
+
+        <div class="preparo">
+            <div class="title_recipe">
+                <h3>Modo de preparo</h3>
+                <a href="#">mostar</a>
+            </div>
+        </div>
+
+        <div class="info">
+            <div class="title_recipe">
+                <h3>Informações adicionais</h3>
+                <a href="#">esconder</a>
+            </div>
+
+            <div class="info_p">
+                <p>Preaqueça a chapa, frigideira ou grelha por 10 minutos antes de levar os hambúrgueres. 
+                Adicione um pouquinho de óleo ou manteiga e não amasse os hambúrgueres! \n\n Você sabia 
+                que a receita que precede o hambúrguer surgiu no século XIII, na Europa? A ideia de moer 
+                a carne chegou em Hamburgo no século XVII, onde um açogueiro resolveu também temperá-la. 
+                Assim, a receita foi disseminada nos Estados Unidos por alemães da região. Lá surgiu a 
+                ideia de colocar o hambúrguer no meio do pão e adicionar outros ingredientes, como queijom 
+                tomates e alface.</p>
+            </div>
+        </div>
+    </div>
 {% endblock %}

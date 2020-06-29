@@ -1,0 +1,55 @@
+.recipe {
+    margin-top: 40px;
+}
+
+.image_container {
+    width: 980px;
+    height: 280px;
+}
+
+.image_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*Faz com que a imagem ocupe o tamanho solicitado sem perder a proporção*/
+    border-radius: 20px;
+}
+
+.titles {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.titles h1 {
+    font-size: 36px;
+    line-height: 46px;
+}
+
+.titles p {
+    font-size: 20px;
+}
+
+.ingredientes {
+    margin-top: 40px;
+}
+
+.title_recipe {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.title_recipe h3 {
+    margin-right: 8px;
+}
+
+.title_recipe a {
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: 4px;
+    color: #999999;
+}
+
+.preparo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

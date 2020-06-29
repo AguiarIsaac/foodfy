@@ -1,0 +1,69 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Foddfy - {{item.title}}</title>
+    <link rel="stylesheet" href="/css/description.css">
+{% endblock %}
+
+{%block content %}
+
+    <div class="recipe">
+        <div class="image_container">
+            <img src="{{item.image}}" alt="{{item.title}}">
+        </div>
+
+        <div class="titles">
+            <h1>{{item.title}}</h1>
+            <p>{{item.author}}</p>
+        </div>
+
+        <div class="cards_recipe">
+            <div class="card_recipe">
+
+                <div class="title_recipe">
+                    <h3>Ingredientes</h3>
+                    <a class="buttom">esconder</a>
+                </div>
+
+                <div class="list_text ativar">
+                    <ul>
+                        {% for ingredient in item.ingredients %}
+                            <li>{{ingredient}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+            </div>
+            
+            <div class="card_recipe">
+                <div class="title_recipe">
+                    <h3>Modo de preparo</h3>
+                    <a class="buttom">mostrar</a>
+                </div>
+                <div class="list_text esconder">
+                    <ul>
+                        {% for fase in item.preparation %}
+                            <li>{{fase}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card_recipe">
+                <div class="title_recipe">
+                    <h3>Informações adicionais</h3>
+                    <a class="buttom">esconder</a>
+                </div>
+
+                <div class="list_text ativar">
+                    <p>{{item.information}}</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+{% endblock %}

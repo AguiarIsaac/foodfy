@@ -1,17 +1,28 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-    <title>Foddfy - Receitas</title>
+    <title>Foddfy</title>
 {% endblock %}
 
-{% block content %}             
+{% block content %}
+    <div class="banner">
+        <div class="intro">
+            <h1>As melhores receitas</h1>
+            <p>Aprenda a contruir  os melhores pratos com receitas criadas por profisionais do mundo inteiro.</p>
+        </div>
+
+        <div class="chef_image">
+            <img src="/assets/119236-OQ05QX-268.png" alt="Cozinheiro">
+        </div>
+    </div>
+
     <div class="title_cards">
         <h2>Receitas</h2>
     </div>
 
     <section class="cards">
-        {% for item in items %}
-            <div class="card">
+        {% for item in items%}
+            <div class="card" id="{{item.id}}">
                 <div class="card_image-container">
                     <img src="{{item.image}}" alt="{{item.title}}">
                 </div>
@@ -26,22 +37,22 @@
             </div>
         {%endfor%}
     </section>
-{% endblock%}
+ {% endblock %}
 
-{% block modal %}
+ {% block modal %} 
     <div class="modal-overlay"> 
         <div class="modal">
             <div class="modal-content">
                 <div class="modal-image">
-                    <img src="../public/assets/hamburguer.png" alt="item">
+                    <img src="" alt="">
                 </div>
 
                 <div class="modal-title">
-                    <h4>Triplo bacon burger</h4>
+                    <h4>comida</h4>
                 </div>
 
                 <div class="modal-author">
-                    <p>Por Jorge Relato</p>
+                    <p>autor</p>
                 </div>
             </div>
 

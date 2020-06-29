@@ -26,17 +26,25 @@ nunjucks.configure('src', {
 
 //Criação de rotas
 server.get('/', function(req, res){
-    res.render('index',  { items: receitas })
+    res.render('home',  { items: receitas })
 })
 
-server.get('/sobre', function(req, res){
-    res.render('sobre')
+server.get('/about', function(req, res){
+    res.render('about')
 })
 
-server.get('/receitas', function(req,res){
-    res.render('receitas', { items: receitas })
+server.get('/recipes', function(req,res){
+    res.render('recipes', { items: receitas })
 })
 
-server.get('/recipe', function (req, res){
-    res.render('recipe', { items: receitas })
+// server.get('/recipes/:id', function(req, res) {
+//     const id = req.params.id
+//     return res.render('recipe', { items: receitas })
+// })
+
+server.get('/recipes/:index', function(req, res){
+    const recipes = receitas
+    const recipeIndex = req.params.index
+    
+    res.render('description', {item: recipes[recipeIndex]})
 })

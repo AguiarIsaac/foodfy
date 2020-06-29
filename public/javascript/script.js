@@ -1,6 +1,6 @@
 const modalOverlay = document.querySelector('.modal-overlay');
 const cards = document.querySelectorAll('.card');
-const cards_recipe = document.querySelectorAll('.card_recipe')
+// const cards_recipe = document.querySelectorAll('.card_recipe')
 
 for (let card of cards) {
     card.addEventListener('click', function(){
@@ -9,20 +9,31 @@ for (let card of cards) {
     })
 }
 
-for (let card_recipe of cards_recipe) {
-    const buttom = card_recipe.querySelector('.buttom')
-    const text = card_recipe.querySelector('.list_text')
 
-    buttom.addEventListener('click', function(){
-        if(buttom.innerHTML == 'esconder') {
-            text.classList.remove('ativar')
-            text.classList.add('esconder')
-            buttom.innerHTML = 'mostar'
-        }
-        else if (buttom.innerHTML == 'mostrar') {
-            text.classList.remove('esconder')
-            text.classList.add('ativar')
-            buttom.innerHTML = 'esconder'
-        }
-    })
+function mudarEstado(estado){
+    let display = document.querySelector(`.${estado}`).style.display
+    if(display == 'none'){
+        document.querySelector(`.${estado}`).style.display = 'block'
+    } else {
+        document.querySelector(`.${estado}`).style.display = 'none'
+    }
 }
+
+// for (let card_recipe of cards_recipe) {
+//     const buttom = card_recipe.querySelector('.buttom')
+//     const text = card_recipe.querySelector('.list_text')
+
+
+//     buttom.addEventListener('click', function(){
+//         if(buttom.innerHTML == 'esconder') {
+//             text.classList.remove('ativar')
+//             text.classList.add('esconder')
+//             buttom.innerHTML = 'mostar'
+//         }
+//         else if (buttom.innerHTML == 'mostrar') {
+//             text.classList.remove('esconder')
+//             text.classList.add('ativar')
+//             buttom.innerHTML = 'esconder'
+//         }
+//     })
+// }

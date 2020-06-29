@@ -22,11 +22,11 @@
 
                 <div class="title_recipe">
                     <h3>Ingredientes</h3>
-                    <a class="buttom">esconder</a>
+                    <a class="buttom"><button type="button" onclick="mudarEstado('list_text')" class="btn">ocultar/mostrar</button></a>
                 </div>
 
-                <div class="list_text ativar">
-                    <ul>
+                <div>
+                    <ul class="list_text">
                         {% for ingredient in item.ingredients %}
                             <li>{{ingredient}}</li>
                         {% endfor %}
@@ -38,9 +38,9 @@
             <div class="card_recipe">
                 <div class="title_recipe">
                     <h3>Modo de preparo</h3>
-                    <a class="buttom">mostrar</a>
+                    <a class="buttom"><button type="button" onclick="mudarEstado('list_p')" class="btn">ocultar/mostrar</button></a>
                 </div>
-                <div class="list_text esconder">
+                <div class="list_p">
                     <ul>
                         {% for fase in item.preparation %}
                             <li>{{fase}}</li>
@@ -52,10 +52,10 @@
             <div class="card_recipe">
                 <div class="title_recipe">
                     <h3>Informações adicionais</h3>
-                    <a class="buttom">esconder</a>
+                    <a class="buttom"><button type="button" onclick="mudarEstado('list_info')" class="btn">ocultar/mostrar</button></a>
                 </div>
 
-                <div class="list_text ativar">
+                <div class="list_info">
                     <p>{{item.information}}</p>
                 </div>
             </div>

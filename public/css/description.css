@@ -55,12 +55,8 @@
 .list_text {
     display: none;
 }
-/* -->buttons<-- */
 
-.esconder {
-    display:none;
-}
-
-.ativar {
-    display: block;
+.btn {
+    outline: none;
+    border-radius: 4px;
 }

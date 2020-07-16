@@ -14,14 +14,21 @@ function mudarEstado(estado){
     let display = document.querySelector(`.${estado}`).style.display
     if(display == 'none'){
         document.querySelector(`.${estado}`).style.display = 'block'
+        document.getElementById(`${estado}`).innerHTML = 'Ocultar'
+        
+
     } else {
         document.querySelector(`.${estado}`).style.display = 'none'
-    }
+        document.getElementById(`${estado}`).innerHTML = 'Mostrar'
+        }
 }
 
-// for (let card_recipe of cards_recipe) {
-//     const buttom = card_recipe.querySelector('.buttom')
-//     const text = card_recipe.querySelector('.list_text')
+const buttons = document.querySelectorAll('.card_recipe a button')
+
+// for (let button of buttons) {
+//     const teste = button.innerHTML
+//     console.log(teste)
+// }
 
 
 //     buttom.addEventListener('click', function(){

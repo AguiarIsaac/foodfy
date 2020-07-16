@@ -22,25 +22,3 @@ function mudarEstado(estado){
         document.getElementById(`${estado}`).innerHTML = 'Mostrar'
         }
 }
-
-const buttons = document.querySelectorAll('.card_recipe a button')
-
-// for (let button of buttons) {
-//     const teste = button.innerHTML
-//     console.log(teste)
-// }
-
-
-//     buttom.addEventListener('click', function(){
-//         if(buttom.innerHTML == 'esconder') {
-//             text.classList.remove('ativar')
-//             text.classList.add('esconder')
-//             buttom.innerHTML = 'mostar'
-//         }
-//         else if (buttom.innerHTML == 'mostrar') {
-//             text.classList.remove('esconder')
-//             text.classList.add('ativar')
-//             buttom.innerHTML = 'esconder'
-//         }
-//     })
-// }

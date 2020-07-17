@@ -56,7 +56,11 @@
                 </div>
 
                 <div class="list_info">
-                    <p>{{item.information}}</p>
+                    {% if item.information %}
+                        <p>{{item.information}}</p>
+                    {% else %}
+                        <p>Ops.. Não temos mais informações =D</p>
+                    {% endif %}
                 </div>
             </div>
         </div>

@@ -24,4 +24,9 @@ routes.get('/recipes/:index', function(req, res){
     res.render('description', {item: recipes[recipeIndex]})
 })
 
+
+routes.get('/admin/recipes', function(req, res){
+    return res.render('recipes/index')
+})
+
 module.exports = routes

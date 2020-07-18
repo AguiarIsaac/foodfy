@@ -1,15 +1,33 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/admin_layout.css">
-        <title>FoodFy Admin</title>
-    </head>
-    
-    <body>
-        <header>
-            <img src="/assets/logo.png" alt="Foodfy_logo">
-        </header>
-    </body>
-</html>
+{% extends "recipes/layout.njk" %}
+
+{% block content %}
+    <div class="title">
+        <h2>Gerenciar receitas</h2>
+    </div>
+
+    <div class="cards">
+        {% for recipe in recipes %}
+
+            <div class="card">
+                <div class="image-card">
+                    <img src="{{recipe.image}}" alt="">
+                </div>
+
+                <div class="info-card">
+                    <div class="title-card">
+                        <p>{{recipe.title}}</p>
+                    </div>
+
+                    <div class="author-card">
+                        <p>{{recipe.author}}</p>
+                    </div>
+
+                    <div class="view-card">
+                        <a href="#">Visualizar</a>
+                    </div>
+                </div>
+            </div>
+
+        {%endfor%}
+    </div>
+{% endblock %}

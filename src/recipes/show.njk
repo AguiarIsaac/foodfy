@@ -1,0 +1,70 @@
+{% extends "recipes/layout.njk" %}
+
+{% block content %}
+    <div class="header">
+        
+        <div class="title-recipe">
+            <h2>Receita: {{recipe.title}}</h2>
+        </div>
+
+        <div class="btn-edit">
+            <a href="#">Editar receita</a>
+        </div>
+    </div>
+
+    <div class="image-recipe">
+        <img src="{{recipe.image}}" alt="{{recipe.title}}">
+    </div>
+
+    <div class="content-recipe">
+        <div class="content-title">
+            <h1>{{recipe.title}}</h1>
+        </div>
+
+        <div class="content-author">
+            <p>Por {{recipe.author}}</p>
+        </div>
+
+        <div class="content-ingredients">
+            <div class="title-ingredients">
+                <p>Ingredientes</p>
+            </div>
+
+            <div class="ingredients">
+                <ul>
+                    {% for ingredient in recipe.ingredients %}
+                        <li>- {{ingredient}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-methods">
+            <div class="title-methods">
+                <p>Modo de preparo</p>
+            </div>
+
+            <div class="methods">
+                <ul>
+                    {% for preparation in recipe.preparation %}
+                        <li>- {{preparation}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-information">
+            <div class="title-information">
+                <p>Informações adicionais</p>
+            </div>
+
+            <div class="information">
+                {% if recipe.information %}
+                    <p>{{recipe.information}}</p>
+                {% else %}
+                    <p>Ops.. Não temos mais informações =D</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

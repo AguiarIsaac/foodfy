@@ -29,4 +29,18 @@ routes.get('/admin/recipes', function(req, res){
     return res.render('recipes/index', { recipes: recipe_list } )
 })
 
+routes.get('/admin/recipes/:id', function(req, res){
+   const { id } = req.params
+   
+   const foundRecipe = recipe_list.find(function(recipe){
+       return recipe.id == id
+   })
+
+   if (!foundRecipe) return res.send('Recipe Not Found!')
+
+   res.render('recipes/show', { recipe: foundRecipe })
+})
+
+
+
 module.exports = routes

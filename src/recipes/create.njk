@@ -1,0 +1,32 @@
+{% extends "recipes/layout.njk" %}
+
+{% block content %}
+    <form action="/recipes" method="post">
+        <div class="title-form">
+            <div>Criando Receita</div>
+            <button type="submit">Salvar receita</button>
+        </div>
+
+        <div class="item">
+            <div>Imagem da receita</div>
+            <input type="url" name="image_url" placeholder="https://">
+        </div>
+
+        <div class="item">
+            <div>ingredientes</div>
+            <input type="text" name="ingredients[]" placeholder="Ingredientes">
+        </div>
+        <button type="submit" class="add-ingredient">Adicionar ingrediente</button>
+
+        <div class="item">
+            <div>Modo de Preparo</div>
+            <input type="text" name="methods[]" placeholder="Passos">
+        </div>
+        <button type="submit" class="add-methods">Adicionar Novo passo</button>
+
+        <div class="item">
+            <div>Informações adicionais</div>
+            <input type="url" name="Information" style="height: 260px">
+        </div>
+    </form>
+{% endblock %}

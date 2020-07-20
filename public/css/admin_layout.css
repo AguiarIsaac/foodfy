@@ -22,6 +22,12 @@ body .container .title,
     margin: 0 auto;
 }
 
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 header img {
     margin-top: 24px;
     margin-left: 375px;
@@ -86,7 +92,9 @@ header img {
     justify-content: space-between;
 }
 
-.header .btn-edit a {
+.header .btn-edit a,
+.title-form button,
+.title a {
     background: #6558C3;
     color: white;
     text-decoration: none;
@@ -154,4 +162,50 @@ header img {
     margin-top: 10px;
     color: #777777;
     font-size: 18px;
+}
+
+
+/* create */
+
+form .title-form {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+
+}
+
+form .title-form div {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.title-form button {
+    cursor: pointer;
+}
+
+form .item div:nth-child(1) {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 32px;
+}
+
+form .item input:nth-child(2) {
+    width: 100%;
+    height: 40px;
+    border: 0.8px solid #777777;
+}
+
+.add-ingredient,
+.add-methods {
+    margin-top: 16px;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: #6558C3;
+}
+
+form .item :last-child input {
+    height: 260px;
 }

@@ -24,9 +24,12 @@ routes.get('/recipes/:index', function(req, res){
     res.render('description', {item: recipes[recipeIndex]})
 })
 
-
 routes.get('/admin/recipes', function(req, res){
     return res.render('recipes/index', { recipes: recipe_list } )
+})
+
+routes.get('/admin/recipes/create', function(req, res){
+    res.render('recipes/create')
 })
 
 routes.get('/admin/recipes/:id', function(req, res){
@@ -40,7 +43,6 @@ routes.get('/admin/recipes/:id', function(req, res){
 
    res.render('recipes/show', { recipe: foundRecipe })
 })
-
 
 
 module.exports = routes

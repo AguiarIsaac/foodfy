@@ -3,6 +3,7 @@
 {% block content %}
     <div class="title">
         <h2>Gerenciar receitas</h2>
+        <a href="recipes/create">Criar receita</a>
     </div>
 
     <div class="cards">
@@ -23,7 +24,7 @@
                     </div>
 
                     <div class="view-card">
-                        <a href="{{recipe.id}}">Visualizar</a>
+                        <a href="recipes/{{recipe.id}}">Visualizar</a>
                     </div>
                 </div>
             </div>

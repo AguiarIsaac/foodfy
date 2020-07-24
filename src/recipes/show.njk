@@ -32,7 +32,9 @@
 
             <div class="ingredients">
                 <ul>
-                    <li>{{recipe.ingredients}}</li>
+                    {% for ingredient in recipe.ingredients %}
+                        <li>{{ingredient}};</li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
@@ -44,7 +46,9 @@
 
             <div class="methods">
                 <ul>
-                    <li>{{recipe.methods}}</li>
+                    {% for method in recipe.methods%}
+                        <li>{{method}};</li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>

@@ -13,7 +13,7 @@
     </div>
 
     <div class="image-recipe">
-        <img src="{{recipe.image}}" alt="{{recipe.title}}">
+        <img src="{{recipe.image_url}}" alt="{{recipe.title}}" style="height: 340px">
     </div>
 
     <div class="content-recipe">
@@ -32,9 +32,7 @@
 
             <div class="ingredients">
                 <ul>
-                    {% for ingredient in recipe.ingredients %}
-                        <li>- {{ingredient}}</li>
-                    {% endfor %}
+                    <li>{{recipe.ingredients}}</li>
                 </ul>
             </div>
         </div>
@@ -46,9 +44,7 @@
 
             <div class="methods">
                 <ul>
-                    {% for preparation in recipe.preparation %}
-                        <li>- {{preparation}}</li>
-                    {% endfor %}
+                    <li>{{recipe.methods}}</li>
                 </ul>
             </div>
         </div>
@@ -59,8 +55,8 @@
             </div>
 
             <div class="information">
-                {% if recipe.information %}
-                    <p>{{recipe.information}}</p>
+                {% if recipe.info %}
+                    <p>{{recipe.info}}</p>
                 {% else %}
                     <p>Ops.. Não temos mais informações =D</p>
                 {% endif %}

@@ -1,53 +1,12 @@
 {% extends "recipes/layout.njk" %}
 
+{% block head %}
+    <link rel="stylesheet" href="/css/admin/create.css">
+{% endblock %}
+
 {% block content %}
     <form action="/admin/recipes/create" method="POST">
-        <div class="title-form">
-            <div>Criando Receita</div>
-            <button type="submit">Salvar receita</button>
-        </div>
-
-        <div class="item-group">
-            <div class="item">
-                <div>Titulo da receita</div>
-                <input type="text" name="title">
-            </div>
-
-            <div class="item">
-                <div>Autor</div>
-                <input type="text" name="author">
-            </div>
-        </div>
-
-        <div class="item">
-            <div>Imagem da receita</div>
-            <input type="url" name="image_url" placeholder="https://">
-        </div>
-
-        <div id="ingredients">
-            <div class="title-ingredients">Ingredientes</div>
-                
-                <div class="ingredient">
-                    <input type="text" name="ingredients[]">
-                </div>
-        </div>
-        <button type="button" class="add-ingredient">Adicionar ingrediente</button>
-
-        <div id="methods">
-            <div class="title-methods">Modo de preparo</div>
-                
-                <div class="method">
-                    <input type="text" name="methods[]">
-                </div>
-        </div>
-        <button type="button" class="add-method">Adicionar passo</button>
-
-        <div class="item">
-            <div>Informações adicionais</div>
-            <textarea name="info" id="" cols="30" rows="10" style="height: 260px"></textarea>
-        </div>
-
-        
+        {% include "recipes/fields.njk" %}
     </form>
     
 {% endblock %}

@@ -1,0 +1,83 @@
+header {
+    background:#111111;
+    width: 100%;
+    height: 80px;
+}
+
+header .logo-container,
+body .container .title,
+.cards {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title a {
+    background: #6558C3;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 36px;
+    border-radius: 4px;
+}
+
+header img {
+    margin-top: 24px;
+    margin-left: 375px;
+}
+
+.container {
+    width: 90%;
+    min-height: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.card {
+    display: flex;
+}
+
+.image-card img {
+    width: 170px;
+    height: 80px;
+    border-radius: 8px;
+}
+
+.title-card {
+    font-size: 14px;
+    font-weight: bold;
+    color: #111111;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+
+.author-card {
+    font-size: 12px;
+    color: #777777;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+
+.view-card a {
+    font-size: 12px;
+    font-weight: bold;
+    color: #6558C3;
+    margin-left: 10px;
+    text-decoration: none;
+}

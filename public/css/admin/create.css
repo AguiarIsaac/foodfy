@@ -1,0 +1,62 @@
+form .title-form {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+
+}
+
+.item-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+form .title-form div {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.title-form button {
+    cursor: pointer;
+}
+
+form .item div:nth-child(1),
+.title-ingredients,
+.title-methods {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-top: 32px;
+}
+
+form .item input:nth-child(2),
+.ingredient input,
+.method input {
+    width: 100%;
+    height: 40px;
+    border: 0.8px solid #777777;
+    padding-left: 8px;
+    box-sizing: border-box;
+}
+
+.add-ingredient,
+.add-method {
+    margin-top: 16px;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: #6558C3;
+}
+
+form .item :last-child input {
+    height: 260px;
+}
+
+textarea {
+    width: 99%;
+    height: 160px;
+    border: 0.8px solid #777777;
+    padding: 8px;
+    font-size: 14px;
+}

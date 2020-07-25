@@ -1,0 +1,76 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .btn-edit a,
+.title-form button {
+    background: #6558C3;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 36px;
+    border-radius: 4px;
+}
+
+.image-recipe {
+    margin-top: 24px;
+}
+
+.image-recipe img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.content-recipe {
+    margin-top: 40px;
+}
+
+.content-title,
+.content-author {
+    text-align: center;
+}
+
+.content-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.content-author {
+    font-size: 14px;
+    color: #777777;
+    margin: 4px 0 24px 0;
+}
+
+.content-methods,
+.content-information {
+    margin-top: 40px;
+}
+
+.title-ingredients,
+.title-methods,
+.title-information {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.ingredients ul,
+.methods ul {
+    list-style-type: none;
+}
+
+.ingredients ul li,
+.methods ul li {
+    font-size: 18px;
+    color: #777777;
+    margin-bottom: 8px;
+}
+
+.information {
+    margin-top: 10px;
+    color: #777777;
+    font-size: 18px;
+}

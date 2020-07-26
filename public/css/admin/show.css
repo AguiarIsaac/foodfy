@@ -4,16 +4,6 @@
     justify-content: space-between;
 }
 
-.header .btn-edit a,
-.title-form button {
-    background: #6558C3;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 36px;
-    border-radius: 4px;
-}
-
 .image-recipe {
     margin-top: 24px;
 }

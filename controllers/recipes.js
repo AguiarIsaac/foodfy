@@ -14,6 +14,11 @@ exports.recipes = function(req,res){
 }
 
 exports.description = function(req, res){
-    // mandar apenas receita selecionada pelo ID
-    res.render('description')
+    const { id } = req.params
+    
+    const recipe = data.recipes.find(function(recipe){
+        return recipe.id == id
+    })
+    
+    res.render('description', {item: recipe})
 }

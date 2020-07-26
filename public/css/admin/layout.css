@@ -17,4 +17,17 @@ body {
     font-weight: bold;
     padding: 8px 36px;
     border-radius: 4px;
+    cursor: pointer;
+}
+
+#delete {
+    background: red;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 36px;
+    border-radius: 4px;
+    position: absolute;
+    margin-left: 840px;
+    cursor: pointer;
 }

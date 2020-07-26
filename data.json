@@ -2,48 +2,27 @@
   "recipes": [
     {
       "id": 1,
-      "title": "Torta de maçã",
-      "author": "Isaac Aguiar",
-      "image_url": "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      "ingredients": "saasas",
-      "methods": "asasas",
-      "info": "Testando o teste"
-    },
-    {
-      "id": 2,
-      "title": "Salada",
-      "author": "Aguiar Isaac",
-      "image_url": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      "ingredients": "Verduras",
-      "methods": "Corta tudo",
-      "info": "teste testando"
-    },
-    {
-      "id": 3,
-      "title": "Torta de maçã",
-      "author": "Isaac Aguiar",
-      "image_url": "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      "ingredients": "Verduras",
-      "methods": "Corta tudo",
-      "info": "teste"
-    },
-    {
-      "id": 4,
-      "title": "Torta de maçã",
-      "author": "Isaac Aguiar",
-      "image_url": "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      "ingredients": "saasas",
-      "methods": "asasas",
-      "info": "dsdfgdfgsf"
-    },
-    {
-      "id": 5,
-      "title": "Café da manhã",
-      "author": "Pereira stilbert",
-      "image_url": "https://images.unsplash.com/photo-1494390248081-4e521a5940db?ixlib=rb-1.2.1&auto=format&fit=crop&w=1295&q=80",
-      "ingredients": "Comidas",
-      "methods": "desse jeito",
-      "info": "Assim que se faz"
+      "title": "Triplo bacon burger",
+      "author": "Jorge Relato",
+      "image_url": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png",
+      "ingredients": [
+        "3 kg de carne moída (escolha uma carne magra e macia)",
+        "300 g de bacon moído",
+        "1 ovo",
+        "3 colheres (sopa) de farinha de trigo",
+        "3 colheres (sopa) de tempero caseiro: feito com alho, sal, cebola, pimenta e cheiro verde processados no liquidificador",
+        "30 ml de água gelada"
+      ],
+      "methods": [
+        "Misture todos os ingredientes muito bem e amasse para que fique tudo muito bem misturado",
+        "Faça porções de 90 g a 100 g",
+        "Forre um plástico molhado em uma bancada e modele os hambúrgueres utilizando um aro como base",
+        "Faça um de cada vez e retire o aro logo em seguida",
+        "Forre uma assadeira de metal com plástico, coloque os hambúrgueres e intercale camadas de carne e plásticos (sem apertar)",
+        "Faça no máximo 4 camadas por forma e leve para congelar",
+        "Retire do congelador, frite ou asse e está pronto"
+      ],
+      "info": "Preaqueça a chapa, frigideira ou grelha por 10 minutos antes de levar os hambúrgueres. Adicione um pouquinho de óleo ou manteiga e não amasse os hambúrgueres! Você sabia que a receita que precede o hambúrguer surgiu no século XIII, na Europa? A ideia de moer a carne chegou em Hamburgo no século XVII, onde um açogueiro resolveu também temperá-la. Assim, a receita foi disseminada nos Estados Unidos por alemães da região. Lá surgiu a ideia de colocar o hambúrguer no meio do pão e adicionar outros ingredientes, como queijom tomates e alface."
     }
   ]
 }

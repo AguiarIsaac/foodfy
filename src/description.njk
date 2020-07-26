@@ -9,7 +9,7 @@
 
     <div class="recipe">
         <div class="image_container">
-            <img src="{{item.image}}" alt="{{item.title}}">
+            <img src="{{item.image_url}}" alt="{{item.title}}">
         </div>
 
         <div class="titles">
@@ -42,7 +42,7 @@
                 </div>
                 <div class="list_p">
                     <ul>
-                        {% for fase in item.preparation %}
+                        {% for fase in item.methods %}
                             <li>{{fase}}</li>
                         {% endfor %}
                     </ul>
@@ -56,8 +56,8 @@
                 </div>
 
                 <div class="list_info">
-                    {% if item.information %}
-                        <p>{{item.information}}</p>
+                    {% if item.info %}
+                        <p>{{item.info}}</p>
                     {% else %}
                         <p>Ops.. Não temos mais informações =D</p>
                     {% endif %}

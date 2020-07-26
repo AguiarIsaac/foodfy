@@ -1,9 +1,5 @@
 {% extends "recipes/layout.njk" %}
 
-{% block head %}
-    <link rel="stylesheet" href="/css/admin/index.css">
-{% endblock %}
-
 {% block content %}
     <div class="title">
         <h2>Gerenciar receitas</h2>
@@ -28,7 +24,7 @@
                     </div>
 
                     <div class="view-card">
-                        <a href="recipes/{{recipe.id}}">Visualizar</a>
+                        <a href="admin/recipes/{{recipe.id}}">Visualizar</a>
                     </div>
                 </div>
             </div>

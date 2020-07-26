@@ -6,25 +6,25 @@
     <div class="item-group">
         <div class="item">
             <div>Titulo da receita</div>
-            <input type="text" name="title">
+            <input type="text" name="title" value="{{item.title}}">
         </div>
 
         <div class="item">
             <div>Autor</div>
-            <input type="text" name="author">
+            <input type="text" name="author" value="{{item.author}}">
         </div>
     </div>
 
     <div class="item">
         <div>Imagem da receita</div>
-        <input type="url" name="image_url" placeholder="https://">
+        <input type="url" name="image_url" placeholder="https://" value="{{item.image_url}}">
     </div>
 
     <div id="ingredients">
         <div class="title-ingredients">Ingredientes</div>
             
             <div class="ingredient">
-                <input type="text" name="ingredients[]">
+                <input type="text" name="ingredients[]" value="{{item.ingredients}}">
             </div>
     </div>
     <button type="button" class="add-ingredient">Adicionar ingrediente</button>
@@ -33,12 +33,12 @@
         <div class="title-methods">Modo de preparo</div>
             
             <div class="method">
-                <input type="text" name="methods[]">
+                <input type="text" name="methods[]" value="{{item.methods}}">
             </div>
     </div>
     <button type="button" class="add-method">Adicionar passo</button>
 
     <div class="item">
         <div>Informações adicionais</div>
-        <textarea name="info" id="" cols="30" rows="10" style="height: 260px"></textarea>
+        <textarea name="info" id="" cols="30" rows="10" style="height: 260px" value="{{item.info}}">{{item.info}}</textarea>
     </div>

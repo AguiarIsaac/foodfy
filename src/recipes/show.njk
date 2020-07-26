@@ -2,7 +2,6 @@
 
 {% block head %}
     <link rel="stylesheet" href="/css/admin/show.css">
-    <link rel="stylesheet" href="/css/admin/index.css">
 {% endblock %}
 
 {% block content %}
@@ -13,7 +12,7 @@
         </div>
 
         <div class="btn-edit">
-            <a href="/recipes/edit">Editar receita</a>
+            <a href="{{recipe.id}}/edit">Editar receita</a>
         </div>
     </div>
 

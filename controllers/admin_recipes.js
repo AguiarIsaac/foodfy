@@ -2,7 +2,6 @@ const data = require('../data.json')
 const fs = require('fs')
 
 exports.index =  function(req, res){
-    console.log(data)
     return res.render('recipes/index', { recipes: data.recipes } )   
 }
 
@@ -11,17 +10,17 @@ exports.home = function(req, res){
 }
 
 exports.create = function(req, res){
-    res.render('admin/recipes/create')
+    res.render('recipes/create')
 }
 
 exports.post = function(req, res){
-    const keys = Object.keys(req.body)
+    // const keys = Object.keys(req.body)
 
-    for(key of keys) {
-        if(req.body[key] == ''){
-            return res.send('Preencha todos os campos!')
-        }
-    }
+    // for(key of keys) {
+    //     if(req.body[key] == ''){
+    //         return res.send('Preencha todos os campos!')
+    //     }
+    // }
 
     let { title, author, image_url, ingredients, methods, info} = req.body
 
@@ -56,6 +55,40 @@ exports.show = function(req, res){
 }
 
 exports.edit = function(req, res){
-    // corrigir direcionamento
-    return res.render('recipes/edit')
+    const { id } = req.params
+    
+    const foundRecipe = data.recipes.find(function(recipe){
+        return recipe.id == id
+    })
+ 
+    if (!foundRecipe) return res.send('Recipe Not Found!')
+
+    res.render('recipes/edit', {item: foundRecipe})
+}
+
+exports.put = function(req, res){
+    const { id } = req.body
+    let index = 0
+
+    const foundRecipe = data.recipes.find(function(recipe, foundIndex){
+        if (id == recipe.id) {
+            index = foundIndex
+            return true
+        }
+    })
+
+    if(!foundRecipe) return res.send('Erro, receita não encontrada.')
+
+    const recipe = {
+        ...foundRecipe,
+        ...req.body
+    }
+
+    data.recipes[index] = recipe
+
+    fs.writeFile('data.json', JSON.stringify(data, null, 2), function (err) {
+        if(err) return res.send('Write Error')
+    })
+
+    return res.redirect(`recipes/${id}`)
 }
